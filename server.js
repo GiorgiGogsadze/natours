@@ -28,9 +28,9 @@ mongoose
 
 const port = process.env.PORT || 3000;
 // const address = '192.168.1.15';
-const address = '127.0.0.1';
-const server = app.listen(port, address, () => {
-  console.log(`App running on ${address}:${port}`);
+// const address = '127.0.0.1';
+const server = app.listen(port, () => {
+  console.log(`App running on ${port}`);
 });
 
 process.on('unhandledRejection', (err) => {
