@@ -7,6 +7,7 @@ const rateLimit = require('express-rate-limit');
 // const helmet = require('helmet');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 
 const userRouter = require(`./routs/userRouts`);
 const tourRouter = require(`./routs/tourRouts`);
@@ -69,7 +70,7 @@ app.use(
     ],
   }),
 );
-
+app.use(compression());
 // Test middleware
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();

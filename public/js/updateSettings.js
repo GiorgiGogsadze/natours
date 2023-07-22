@@ -7,7 +7,7 @@ const updateData = async (data) => {
   try {
     const res = await axios({
       method: 'PATCH',
-      url: `${window.location.origin}/api/v1/users/updateMe`,
+      url: `/api/v1/users/updateMe`,
       data,
     });
 
@@ -35,7 +35,7 @@ const updatePassword = async (currentP, newP, confirmP) => {
   try {
     const res = await axios({
       method: 'PATCH',
-      url: `${window.location.origin}/api/v1/users/updateMyPassword`,
+      url: `/api/v1/users/updateMyPassword`,
       data: {
         passwordCurrent: currentP,
         password: newP,
